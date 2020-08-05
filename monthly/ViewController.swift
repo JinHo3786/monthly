@@ -22,23 +22,21 @@ class ViewController: UIViewController {
         
         switch segmentedControl.selectedSegmentIndex
         {
-            case 0:
-                UIView.animate(withDuration: 0.5, animations: {
-                    self.searchview.alpha = 1
-                    self.userview.alpha = 0
-                })
-                break
-                
-            case 1:
-
-                UIView.animate(withDuration: 0.5, animations: {
-                    self.searchview.alpha = 0
-                    self.userview.alpha = 1
-                })
-                break
+            
+            case 3:
+             UIView.animate(withDuration: 0.5, animations: {
+                               self.searchview.alpha = 0
+                               self.userview.alpha = 1
+                           })
+                           break
            
             default:
-                break
+                UIView.animate(withDuration: 0.5, animations: {
+                                 self.searchview.alpha = 1
+                                 self.userview.alpha = 0
+                             })
+                             break
+             
             }
     }
     
